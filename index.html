@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="jumbotron text-center" >
+        <h1 class="display-4">Weather Dashboard</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+                Search For City
+                <br>
+                <input type="text" id="city">
+                <button class="btn btn-primary" id="search">Search</button>
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+            <ul id="cityList"></ul>
+        </div>
+        <div class="col-sm-8">
+            <div class="row ml-2 ">
+                <div class="col-sm-12 jumbotron currentWeather">
+                    <div id="uvDiv"></div>
+                </div>
+            </div>
     <script src="./script.js"></script>
 </body>
 </html>
