@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="jumbotron text-center" >
-        <h1 class="display-4">Weather Dashboard</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-                Search For City
-                <br>
-                <input type="text" id="city">
-                <button class="btn btn-primary" id="search">Search</button>
-                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-            <ul id="cityList"></ul>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">    
+    <!-- Weather Dashboard Banner -->
+    <body>
+        <nav class="navbar navbar-dark bg-dark justify-content-center"> 
+            <span class="navbar-brand h1">Weather Dashboard</span>
+        </nav>
+        <br>
+        <!-- City Search -->
+        <div class="container-fluid">
+        <div class="row">
+                <div class="col-md-3 searchColumn">
+                    <form>
+                        <h4>Search for a City:</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cityInput" placeholder="">
+                            <!-- Search Button -->
+                            <button id="submitCity" type="submit">Search</button>
+                            <!-- Clear Button -->
+                            <button id="clear" type="submit">Clear</button>
+                        </div>
+                    </form>
+                 <div id="previousSearch">
         </div>
-        <div class="col-sm-8">
-            <div class="row ml-2 ">
-                <div class="col-sm-12 jumbotron currentWeather">
-                    <div id="uvDiv"></div>
-                </div>
+        </div>
+        <!-- Current Weather -->
+        <div class="col-md-9">
+            <div class="container" id="currentWeather">
+                <h2>Current Weather Here</h2>
             </div>
-    <script src="./script.js"></script>
+        <div>
+        <!-- 5 Day Forecast -->
+        <h3>5-Day Forecast:</h3>
+            <div class="row" id="weatherForecast"></div>
+    <!--JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
