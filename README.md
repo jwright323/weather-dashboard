@@ -31,5 +31,5 @@ https://jerronm.github.io/weather-dashboard/
 
 
 # Screenshot
-<img src="https://github.com/JerronM/weather-dashboard/blob/main/assets/homepage.png">
+<img src="https://github.com/JerronM/weather-dashboard/blob/main/assets/demo.png">
 
