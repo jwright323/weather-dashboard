@@ -8,13 +8,13 @@ $("#submitCity").click(function() {
     event.preventDefault();
     var cityName = $("#cityInput").val();
     returnCurrentWeather(cityName);
-    returnWeatherForecast(cityName);
+    returntheForecast(cityName);
 });
 // Previous Citys show under search 
 $("#previousSearch").click(function() {
     var cityName = event.target.value;
     returnCurrentWeather(cityName);
-    returnWeatherForecast(cityName);
+    returntheForecast(cityName);
 })
 if (localStorage.getItem("weatherSearches")) {
     theCities = JSON.parse(localStorage.getItem("weatherSearches"));
@@ -42,7 +42,7 @@ function returnCurrentWeather(cityName) {
     })
 };
 // API call for 5 day weather forecast
-function returnWeatherForecast(cityName) {
+function returntheForecast(cityName) {
     var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&APPID=6c0ac38b22e3e819b50460a5a899f855`;
     $.get(queryURL).then(function(response){
         var forecastInfo = response.list;
@@ -74,7 +74,7 @@ function returnUVIndex(coordinates) {
     $.get(queryURL).then(function(response){
         var currUVIndex = response.value;
         var uvSeverity = "green";
-        currentWeather.append(`<p>UV Index: <span class="uvPadding" style="background-color: ${uvSeverity};">${currUVIndex}</span></p>`);
+        weatherRightNow.append(`<p>UV Index: <span class="uvPadding" style="background-color: ${uvSeverity};">${currUVIndex}</span></p>`);
     })
 }
 // Recent search history
